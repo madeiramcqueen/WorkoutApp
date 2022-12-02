@@ -1,4 +1,4 @@
-export const exercises = [
+export const exerciseTypes = [
     {
         'name': 'Bench Press',
         'image': '',
