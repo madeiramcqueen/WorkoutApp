@@ -32,6 +32,7 @@ export default function ExercisePage() {
                     <option value="45">45</option>
                     <option value="50">50</option>
                 </select>
+                <button type='submit'>Add Exercise To Your Workout</button>
             </form>
         </div>
 
