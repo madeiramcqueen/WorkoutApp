@@ -1,7 +1,8 @@
-export default function ExerciseCard({ name }) {
+export default function ExerciseCard({ name, image }) {
     return (
         <div className="exercise-card">
-            <p> Name:{name} </p>
+            <p> {name} </p>
+            <img src={image} />
         </div>
     )
 }

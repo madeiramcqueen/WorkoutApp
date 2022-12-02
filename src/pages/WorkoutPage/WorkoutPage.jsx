@@ -8,7 +8,8 @@ export default function WorkoutPage() {
       {exerciseTypes.map((exercise) => (
         <ExerciseCard
           key={exercise.name}
-          name={exercise.name} />
+          name={exercise.name}
+          image={exercise.image}/>
       ))}
     </div>
 
