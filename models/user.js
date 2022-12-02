@@ -18,18 +18,19 @@ const userSchema = new Schema({
     trim: true,
     minlength: 3,
     required: true
-  }
+  },
+  workouts: [workoutSchema],
 }, {
   timestamps: true,
   toJSON: {
-    transform: function(doc, ret) {
+    transform: function (doc, ret) {
       delete ret.password;
       return ret;
     }
   }
 });
 
-userSchema.pre('save', async function(next) {
+userSchema.pre('save', async function (next) {
   // 'this' is the user doc
   if (!this.isModified('password')) return next();
   // the password is either new, or being updated
