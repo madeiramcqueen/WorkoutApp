@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import WorkoutPage from '../WorkoutPage/WorkoutPage';
+import ExercisePage from '../ExercisePage/ExercisePage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             {/* Route components in here */}
             <Route path="/workouts" element={<WorkoutPage />} />
+            <Route path="/exercise" element={<ExercisePage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
           </Routes>
         </>
