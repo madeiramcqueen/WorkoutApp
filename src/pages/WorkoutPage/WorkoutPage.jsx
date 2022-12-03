@@ -4,7 +4,7 @@ import { exerciseTypes } from '../../data'
 export default function WorkoutPage() {
   return (
     <div className="workout-page">
-      <h1>Workout Page</h1>
+      <h1 class="w3-padding-30 w3-round ">Create Your Workout</h1>
       {exerciseTypes.map((exercise) => (
         <ExerciseCard
           key={exercise.name}

@@ -15,7 +15,7 @@ function App() {
       {user ?
         <>
           <NavBar user={user} setUser={setUser} />
-          <h1>Welcome to your workout app!</h1>
+          <h1 class="w3-center w3-animate-top">Welcome to your workout app!</h1>
           <Routes>
             <Route path="/workouts" element={<WorkoutPage />} />
             <Route path="/exercise" element={<ExercisePage />} />
