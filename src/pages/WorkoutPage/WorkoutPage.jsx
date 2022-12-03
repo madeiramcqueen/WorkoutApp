@@ -9,7 +9,7 @@ export default function WorkoutPage() {
         <ExerciseCard
           key={exercise.name}
           name={exercise.name}
-          image={exercise.image}/>
+          image={exercise.image} />
       ))}
     </div>
 
