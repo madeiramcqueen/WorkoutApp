@@ -4,6 +4,19 @@ const bcrypt = require('bcrypt');
 
 const SALT_ROUNDS = 6;
 
+const exerciseSchema = new Schema({
+  name: { type: String },
+  image: { type: String },
+  weight: { type: Number },
+  reps: { type: Number }
+})
+
+const workoutSchema = new Schema({
+  date: { type: String }, //TODO figure out calendar?
+  duration: { type: Number },
+  exercises: [exerciseSchema]
+})
+
 const userSchema = new Schema({
   name: { type: String, required: true },
   email: {
@@ -19,6 +32,8 @@ const userSchema = new Schema({
     minlength: 3,
     required: true
   },
+  workouts: [workoutSchema],
+
 }, {
   timestamps: true,
   toJSON: {

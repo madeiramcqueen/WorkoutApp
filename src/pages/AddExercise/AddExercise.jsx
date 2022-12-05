@@ -1,7 +1,23 @@
-export default function ExercisePage({name}) {
+import { useParams } from "react-router-dom"
+import { useState } from "react"
+
+export default function AddExercise() {
+    let { exerciseName } = useParams()
+
+
+    // const handleOnChange = function (event) {
+    //     setExercise({ level: event.target.value, reps: event.target.value })
+    // }
+
+    // const handleAddSkill = function (event) {
+    //     event.preventDefault()
+    //     setExercise(exercise)
+    //     console.log(exercise)
+    // }
+
     return (
-        <div className="ExercisePage">
-            <h1 class="w3-padding-30 w3-roundcode ">Select your {name} details </h1>
+        <div className="AddExercise">
+            <h1 class="w3-padding-30 w3-roundcode ">Select your {exerciseName} details </h1>
             <form>
                 <label>Weight Level</label>
                 <select>

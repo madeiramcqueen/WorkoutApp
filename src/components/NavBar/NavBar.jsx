@@ -12,6 +12,8 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
+      <Link to="/">Home Page</Link>
+      &nbsp; | &nbsp;
       <Link to="/workouts">Create Your Workout</Link>
       &nbsp; | &nbsp;
       <Link to="/exercise">Exercise Form</Link>
