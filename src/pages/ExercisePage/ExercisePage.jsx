@@ -1,7 +1,7 @@
-export default function ExercisePage() {
+export default function ExercisePage({name}) {
     return (
         <div className="ExercisePage">
-            <h1 class="w3-padding-30 w3-round">Select Your Exercise</h1>
+            <h1 class="w3-padding-30 w3-roundcode ">Select your {name} details </h1>
             <form>
                 <label>Weight Level</label>
                 <select>
