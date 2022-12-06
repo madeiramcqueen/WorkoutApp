@@ -15,7 +15,7 @@ export function update(id, workout) {
     return sendRequest(`${BASE_URL}/${id}`, 'PUT', workout);
 }
 
-export function create(id, workout) {
+export function create(workout) {
     return sendRequest(BASE_URL, 'POST', workout);
 }
 

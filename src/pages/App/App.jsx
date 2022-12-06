@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import WorkoutPage from '../WorkoutPage/WorkoutPage';
-import AddExercise from '../AddExercise/AddExercise';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
 import WorkoutList from '../../components/WorkoutList/WorkoutList';
