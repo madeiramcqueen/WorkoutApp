@@ -14,7 +14,7 @@ export default function WorkoutPage() {
 
   const onClick = function (event) {
     event.preventDefault()
-    create(workout).then(navigateHome)
+    create(workout).then(navigateHome) //TODO, not working and need to debug
   }
 
   return (
