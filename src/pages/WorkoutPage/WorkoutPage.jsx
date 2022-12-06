@@ -1,7 +1,9 @@
 import ExerciseCard from "../ExerciseCard/ExerciseCard";
 import { exerciseTypes } from '../../data'
+import { useState } from "react";
 
-export default function WorkoutPage({ user, setUser }) {
+export default function WorkoutPage() {
+  const [workout, setWorkout] = useState({ exercises: [] })
 
   return (
     <div className="workout-page">

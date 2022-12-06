@@ -22,11 +22,8 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <h1 className="w3-center w3-animate-top">Welcome to your workout app!</h1>
           <Routes>
-            <Route path="/" element={<WorkoutList user={user} setUser={setUser} />} />
-            <Route path="/workouts" element={<WorkoutPage user={user} setUser={setUser} />} />
-            {/* <Route path="/exercise" element={<ExercisePage />} /> */}
-            <Route path="/workouts/:exerciseName" element={<AddExercise user={user} setUser={setUser} />}
-            />
+            <Route path="/" element={<WorkoutList />} />
+            <Route path="/workouts" element={<WorkoutPage />} />
           </Routes>
         </>
         :

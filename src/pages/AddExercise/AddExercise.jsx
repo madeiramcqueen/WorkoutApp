@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useState } from "react"
 
-export default function AddExercise() {
+export default function AddExercise({workout, setWorkout}) {
     let { exerciseName } = useParams()
 
 
