@@ -15,10 +15,3 @@ export function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }
 
-export function show(id) {
-  return sendRequest(`${BASE_URL}/${id}`);
-}
-
-export function update(id, user) {
-  return sendRequest(`${BASE_URL}/${id}`, 'PUT', user);
-}

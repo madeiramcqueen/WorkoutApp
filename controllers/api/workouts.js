@@ -1,4 +1,5 @@
 
+const workout = require('../../models/workout');
 const Workout = require('../../models/workout')
 
 module.exports = {
@@ -31,9 +32,12 @@ async function updateWorkout(req, res) {
 
 async function index(req, res) {
     try {
+        const workouts = await Workout.find({})
+        res.json(workouts)
+        console.log("got workouts!")
 
     } catch (err) {
-
+        res.status(400).json(err);
     }
 }
 

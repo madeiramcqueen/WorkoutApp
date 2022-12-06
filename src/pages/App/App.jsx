@@ -7,19 +7,13 @@ import AddExercise from '../AddExercise/AddExercise';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
 import WorkoutList from '../../components/WorkoutList/WorkoutList';
-import { show } from '../../utilities/users-api';
-
-  //TODO figure out how to call user by email
-async function getUserModel() {
-  return await show('638e5816cd864b2b1b88932c')
-}
+import { index } from '../../utilities/workouts-api'
 
 function App() {
   const [user, setUser] = useState(getUser());
-  
-  const userModel = getUserModel()
-  console.log(userModel)
 
+  index().then(workouts =>
+    console.log(workouts))
 
   return (
     <main className="App">
