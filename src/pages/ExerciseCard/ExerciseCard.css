@@ -2,11 +2,12 @@
     position: relative;
 }
 
+
 label {
     padding: 5px 20px;
     border: none;
     border-radius: 4px;
-    background-color: #f1f1f197;
+    background-color: #f1f1f1;
 }
 
 select {
@@ -56,5 +57,5 @@ select {
 .button4 {
     background-color: #f1f1f197;
     color: black;
-    border: 2px solid #e7e7e7;
+    border: 2px solid black;
 }

@@ -20,7 +20,9 @@ export default function WorkoutList() {
             <h2>Your current workouts:</h2>
             {
                 workouts
-                    ? <p>{workouts.map(workout => <span key={workout._id}> {workout._id} </span>)}</p>
+                    ? <p>{workouts.map(workout =>
+                        <ul className="w3-card-4" key={workout._id}> {workout._id} </ul>)}
+                    </p>
                     : <p>Waiting for server...</p>
             }
             <Link to={`/workouts`}>Create Your Workout!</Link>

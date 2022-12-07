@@ -1,4 +1,5 @@
 import ExerciseCard from "../ExerciseCard/ExerciseCard";
+import './WorkoutPage.css'
 import { exerciseTypes } from '../../data'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -19,8 +20,8 @@ export default function WorkoutPage() {
 
   return (
     <div className="workout-page">
-      <h4>Select Exercises To Add To Your Workout:</h4>
-      <button type="submit" className="w3-grey" onClick={onClick}>Save My Workout</button>
+      <h5>Select Exercises To Add To Your Workout:</h5>
+      <button type="submit" className="button button4" onClick={onClick}>Save My Workout</button>
       {workout.exercises.map((exercise, key) => (
         <div
           key={key} className="w3-panel w3-card-4">
