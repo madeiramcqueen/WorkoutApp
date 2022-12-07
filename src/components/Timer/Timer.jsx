@@ -2,12 +2,13 @@ import { useState } from "react"
 import { useRef } from "react"
 
 //Reference: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+//Reference: https://dev.to/am20dipi/how-to-start-stop-counter-in-react-3hf1
 
 export default function Timer() {
     const [seconds, setSeconds] = useState(0)
     //useRef will not re-render, using this instead of useState
     const intervalId = useRef()
-    //seconds will move up by 1 second intervals
+    //seconds will move up by 1
     const intervalCallback = () => {
         setSeconds(seconds => seconds + 1)
     }
@@ -17,6 +18,28 @@ export default function Timer() {
         intervalId.current = setInterval(intervalCallback, 1000)
         document.querySelector('.start-button').setAttribute('disabled', true)
         document.querySelector('.stop-button').removeAttribute('disabled')
+
+        //add pause button
+        const pauseButton = document.createElement('button')
+        pauseButton.innerText = 'pause'
+        pauseButton.className = 'pause-button'
+        document.querySelector('.timer').appendChild(pauseButton)
+        pauseButton.addEventListener('click', pauseTimer)
+    }
+
+    const pauseTimer = () => {
+        //when pause button is clicked, change innerText to resume
+        if (document.querySelector('.pause-button').innerText === 'pause') {
+            document.querySelector('.pause-button').innerText = ('resume')
+
+            //delete the timer interval
+            clearInterval(intervalId.current)
+
+        } else {
+            document.querySelector('.pause-button').innerText = ('pause')
+            //continue timer (start a new timer)
+            intervalId.current = setInterval(intervalCallback, 1000)
+        }
     }
 
     const stopTimer = () => {
