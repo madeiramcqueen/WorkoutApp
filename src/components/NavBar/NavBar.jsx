@@ -16,8 +16,6 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <Link to="/workouts">Create Your Workout</Link>
       &nbsp; | &nbsp;
-      <Link to="/exercise">Exercise Form</Link>
-      &nbsp; | &nbsp;
       <span>Welcome, {user.name}</span>
       &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>Log Out</Link>

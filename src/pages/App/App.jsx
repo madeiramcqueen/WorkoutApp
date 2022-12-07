@@ -7,6 +7,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
 import WorkoutList from '../../components/WorkoutList/WorkoutList';
 import { index } from '../../utilities/workouts-api'
+import Timer from '../../components/Timer/Timer';
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -19,7 +20,6 @@ function App() {
       {user ?
         <>
           <NavBar user={user} setUser={setUser} />
-          <h1 className="w3-center w3-animate-top">Welcome to your workout app!</h1>
           <Routes>
             <Route path="/" element={<WorkoutList />} />
             <Route path="/workouts" element={<WorkoutPage />} />

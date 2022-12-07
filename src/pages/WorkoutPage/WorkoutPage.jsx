@@ -19,17 +19,17 @@ export default function WorkoutPage() {
 
   return (
     <div className="workout-page">
-      <h1>Here's Your Current Workout:</h1>
-      <button type="submit" onClick={onClick}>Save My Workout</button>
+      <h4>Select Exercises To Add To Your Workout:</h4>
+      <button type="submit" className="w3-grey" onClick={onClick}>Save My Workout</button>
       {workout.exercises.map((exercise, key) => (
         <div
-          key={key}>
+          key={key} className="w3-panel w3-card-4">
           <p>Exercise Name: {exercise.name}</p>
           <p>Exercise Weight: {exercise.weight}</p>
           <p>Exercise Reps: {exercise.reps}</p>
         </div>
       ))}
-      <h1 className="w3-padding-30 w3-round ">Create Your Workout</h1>
+
       {exerciseTypes.map((exercise) => (
         <ExerciseCard
           key={exercise.name}
