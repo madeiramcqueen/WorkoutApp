@@ -16,10 +16,20 @@ export default function WorkoutListPage() {
         fetchWorkoutsAndUpdateState()
     }, [])
 
+    const removeWorkoutById = (id) => {
+        setWorkouts(current =>
+            current.filter(workout => {
+                return workout._id !== id
+            }))
+    }
+
+
     const deleteButton = (event) => {
         console.log('going to delete', event.target.value)
+        //delete on server
         deleteWorkout(event.target.value)
-        // setWorkouts(undefined)
+        //delete on client
+        removeWorkoutById(event.target.value)
     }
 
     return (
