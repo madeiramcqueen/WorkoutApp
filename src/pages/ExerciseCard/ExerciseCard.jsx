@@ -28,7 +28,7 @@ export default function ExerciseCard({ name, image, workout, setWorkout }) {
                 </div>
             </div>
             <form onSubmit={onClick}>
-                <label>Weight Level</label>
+                <label>Weight Level:</label>
                 <select type="option" value={exercise.weight} onChange={onWeightChange}>
                     <option value="None">None</option>
                     <option value="2">2</option>
@@ -36,7 +36,7 @@ export default function ExerciseCard({ name, image, workout, setWorkout }) {
                     <option value="5">5</option>
                     <option value="8">8</option>
                     <option value="10">10</option>
-                    <option value="5">15</option>
+                    <option value="15">15</option>
                     <option value="20">20</option>
                     <option value="25">25</option>
                     <option value="30">30</option>
@@ -45,7 +45,7 @@ export default function ExerciseCard({ name, image, workout, setWorkout }) {
                     <option value="45">45</option>
                     <option value="50">50</option>
                 </select>
-                <label>Number of Reps</label>
+                <label>Reps:</label>
                 <select type="option" value={exercise.reps} onChange={onRepsChange}>
                     <option value="5">5</option>
                     <option value="5">5</option>
@@ -59,7 +59,7 @@ export default function ExerciseCard({ name, image, workout, setWorkout }) {
                     <option value="45">45</option>
                     <option value="50">50</option>
                 </select>
-                <button type='submit' className="button button4">Add Exercise To Your Workout</button>
+                <button type='submit' className="button button4">Add Exercise</button>
             </form>
         </div>
     )
