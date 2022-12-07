@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { index } from "../../utilities/workouts-api";
+import { deleteWorkout } from "../../utilities/workouts-api";
 import './WorkoutListPage.css'
+
 
 export default function WorkoutListPage() {
     const [workouts, setWorkouts] = useState()
@@ -12,8 +14,11 @@ export default function WorkoutListPage() {
             setWorkouts(response)
         }
         fetchWorkoutsAndUpdateState()
-    }, [])
+    }, [workouts])
 
+    const deleteButton = () => {
+
+    }
 
     return (
         <div className="workout-list">
@@ -24,7 +29,10 @@ export default function WorkoutListPage() {
                     <div>{workouts.map(workout =>
                         <ul key={workout._id}>
                             <Link className="w3-card-4" to={`/workouts/${workout._id}`}>Workout : {workout._id}</Link>
-                        </ul>)}
+                            <button className="delete-button" onClick={deleteButton}>X</button>
+                        </ul>
+                    )}
+
                     </div>
                     : <p>Waiting for server...</p>
             }

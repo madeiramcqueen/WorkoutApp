@@ -19,6 +19,6 @@ export function create(workout) {
     return sendRequest(BASE_URL, 'POST', workout);
 }
 
-export function deleteWorkout(id, workout) {
-    return sendRequest(`${BASE_URL}/${id}`, 'DELETE', workout);
+export function deleteWorkout(id) {
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }

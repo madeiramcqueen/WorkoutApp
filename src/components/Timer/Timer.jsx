@@ -3,7 +3,7 @@ import { useState, useRef } from "react"
 //Reference: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 //Reference: https://dev.to/am20dipi/how-to-start-stop-counter-in-react-3hf1
 
-export default function Timer() {
+export default function Timer({ nextCallback }) {
     const [seconds, setSeconds] = useState(0)
     //useRef will not re-render, using this instead of useState
     const intervalId = useRef()
@@ -45,10 +45,14 @@ export default function Timer() {
         //delete the timer interval
         clearInterval(intervalId.current)
         document.querySelector('.stop-button').setAttribute('disabled', true)
-        document.querySelector('.stop-button').removeAttribute('disabled')
+        document.querySelector('.start-button').removeAttribute('disabled')
 
         //delete pause button
         document.querySelector('.pause-button').remove()
+
+        //invoke next callback
+        nextCallback()
+        console.log('got nextCallback!', nextCallback)
     }
 
     return (
