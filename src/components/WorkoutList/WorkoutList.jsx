@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { index } from "../../utilities/workouts-api";
+import './WorkoutList.css'
 
 export default function WorkoutList() {
     const [workouts, setWorkouts] = useState()
@@ -25,7 +26,7 @@ export default function WorkoutList() {
                     </p>
                     : <p>Waiting for server...</p>
             }
-            <Link to={`/workouts`}>Create Your Workout!</Link>
+            <Link className="link" to={`/workouts`}>Create Your Workout!</Link>
         </div>
     )
 }

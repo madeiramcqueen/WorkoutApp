@@ -20,7 +20,7 @@ export default function WorkoutPage() {
 
   return (
     <div className="workout-page">
-      <h5>Select Exercises To Add To Your Workout:</h5>
+      <h5>Add Exercises To Your Workout:</h5>
       <button type="submit" className="button button4" onClick={onClick}>Save My Workout</button>
       {workout.exercises.map((exercise, key) => (
         <div
