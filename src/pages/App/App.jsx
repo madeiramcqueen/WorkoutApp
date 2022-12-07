@@ -9,7 +9,7 @@ import WorkoutList from '../../components/WorkoutList/WorkoutList';
 import { index } from '../../utilities/workouts-api'
 import Timer from '../../components/Timer/Timer';
 
-function App() {
+export default function App() {
   const [user, setUser] = useState(getUser());
 
   index().then(workouts =>
@@ -31,5 +31,3 @@ function App() {
     </main>
   );
 }
-
-export default App;
