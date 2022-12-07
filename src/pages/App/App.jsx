@@ -9,6 +9,7 @@ import './App.css';
 import WorkoutListPage from '../WorkoutListPage/WorkoutListPage';
 import { index } from '../../utilities/workouts-api'
 import Timer from '../../components/Timer/Timer';
+import TrackWorkoutPage from '../TrackWorkoutPage/TrackWorkoutPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -25,7 +26,7 @@ export default function App() {
             <Route path="/" element={<WorkoutListPage />} />
             <Route path="/workouts" element={<WorkoutPage />} />
             <Route path="/workouts/:workoutId" element={<WorkoutDetailPage />} />
-            <Route path="/timer" element={<Timer />} />
+            <Route path="/track/:workoutId" element={<TrackWorkoutPage />} />
           </Routes>
         </>
         :

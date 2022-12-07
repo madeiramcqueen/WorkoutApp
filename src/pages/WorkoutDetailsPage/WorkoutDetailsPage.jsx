@@ -35,7 +35,7 @@ export default function WorkoutDetailPage() {
                     : <p>Waiting for server...</p>
             }
 
-            <Link to={`/timer`}>Start Workout!</Link>
+            <Link to={`/track/${workoutId}`}>Start Workout!</Link>
         </div>
 
     )
