@@ -20,16 +20,17 @@ export default function Timer() {
     }
 
     const stopTimer = () => {
-
+        //delete the timer interval
+        clearInterval(intervalId.current)
+        document.querySelector('.stop-button').setAttribute('disabled', true)
+        document.querySelector('.stop-button').removeAttribute('disabled')
     }
-
-    const Count = seconds
 
     return (
         <div className="timer">
             <button className="start-button" onClick={startTimer}>Start</button>
-            <button className="stop-button">Stop</button>
-            <p id="count">{Count}</p>
+            <button className="stop-button" onClick={stopTimer}>Stop</button>
+            <p id="counter">{seconds}</p>
 
         </div>
     )
