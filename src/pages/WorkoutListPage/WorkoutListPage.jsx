@@ -3,9 +3,8 @@ import { useState, useEffect } from "react";
 import { index } from "../../utilities/workouts-api";
 import './WorkoutListPage.css'
 
-export default function WorkoutList() {
+export default function WorkoutListPage() {
     const [workouts, setWorkouts] = useState()
-    console.log('Workouts list/home page is rendering!')
 
     useEffect(() => {
         async function fetchWorkoutsAndUpdateState() {
@@ -23,7 +22,7 @@ export default function WorkoutList() {
             {
                 workouts ?
                     <div>{workouts.map(workout =>
-                        <ul>
+                        <ul key={workout._id}>
                             <Link className="w3-card-4" to={`/workouts/${workout._id}`}>Workout : {workout._id}</Link>
                         </ul>)}
                     </div>

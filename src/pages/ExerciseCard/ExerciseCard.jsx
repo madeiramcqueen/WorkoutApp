@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './ExerciseCard.css';
 
 export default function ExerciseCard({ name, image, workout, setWorkout }) {
-    const [exercise, setExercise] = useState({ name: name, weight: 10, reps: 10 })
+    const [exercise, setExercise] = useState({ name: name, image: image, weight: 10, reps: 10 })
 
     //set exercise weight
     const onWeightChange = function (event) {

@@ -6,7 +6,7 @@ import WorkoutPage from '../WorkoutPage/WorkoutPage';
 import WorkoutDetailPage from '../WorkoutDetailsPage/WorkoutDetailsPage';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
-import WorkoutList from '../WorkoutListPage/WorkoutListPage';
+import WorkoutListPage from '../WorkoutListPage/WorkoutListPage';
 import { index } from '../../utilities/workouts-api'
 import Timer from '../../components/Timer/Timer';
 
@@ -22,7 +22,7 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/" element={<WorkoutList />} />
+            <Route path="/" element={<WorkoutListPage />} />
             <Route path="/workouts" element={<WorkoutPage />} />
             <Route path="/workouts/:workoutId" element={<WorkoutDetailPage />} />
             <Route path="/timer" element={<Timer />} />
