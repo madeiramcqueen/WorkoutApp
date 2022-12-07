@@ -3,10 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import WorkoutPage from '../WorkoutPage/WorkoutPage';
-import WorkoutDetailPage from '../WorkoutDetails/WorkoutDetailsPage';
+import WorkoutDetailPage from '../WorkoutDetailsPage/WorkoutDetailsPage';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
-import WorkoutList from '../../components/WorkoutList/WorkoutList';
+import WorkoutList from '../WorkoutListPage/WorkoutListPage';
 import { index } from '../../utilities/workouts-api'
 import Timer from '../../components/Timer/Timer';
 

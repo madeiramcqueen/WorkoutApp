@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { index } from "../../utilities/workouts-api";
-import './WorkoutList.css'
+import './WorkoutListPage.css'
 
 export default function WorkoutList() {
     const [workouts, setWorkouts] = useState()
@@ -21,9 +21,11 @@ export default function WorkoutList() {
             <h4>Welcome to your Workouts Page! </h4>
             <h4>Take a look at your current workouts:</h4>
             {
-                workouts
-                    ? <div>{workouts.map(workout =>
-                        <ul className="w3-card-4" key={workout._id}> {workout._id} </ul>)}
+                workouts ?
+                    <div>{workouts.map(workout =>
+                        <ul>
+                            <Link className="w3-card-4" to={`/workouts/${workout._id}`}>Workout : {workout._id}</Link>
+                        </ul>)}
                     </div>
                     : <p>Waiting for server...</p>
             }
