@@ -6,6 +6,6 @@ router.post('/', workoutCtrl.create);
 router.put('/:id', workoutCtrl.update);
 router.get('/', workoutCtrl.index);
 router.get('/:id', workoutCtrl.show);
-router.get('/:id', workoutCtrl.delete);
+router.delete('/:id', workoutCtrl.delete);
 
 module.exports = router;

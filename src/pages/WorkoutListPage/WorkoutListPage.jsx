@@ -14,10 +14,12 @@ export default function WorkoutListPage() {
             setWorkouts(response)
         }
         fetchWorkoutsAndUpdateState()
-    }, [workouts])
+    }, [])
 
-    const deleteButton = () => {
-
+    const deleteButton = (event) => {
+        console.log('going to delete', event.target.value)
+        deleteWorkout(event.target.value)
+        // setWorkouts(undefined)
     }
 
     return (
@@ -29,7 +31,8 @@ export default function WorkoutListPage() {
                     <div>{workouts.map(workout =>
                         <ul key={workout._id}>
                             <Link className="w3-card-4" to={`/workouts/${workout._id}`}>Workout : {workout._id}</Link>
-                            <button className="delete-button" onClick={deleteButton}>X</button>
+                            <button className="delete-button" onClick={deleteButton}
+                                value={workout._id}>X</button>
                         </ul>
                     )}
 
