@@ -18,12 +18,13 @@ export default function WorkoutList() {
 
     return (
         <div className="workout-list">
-            <h2>Your current workouts:</h2>
+            <h4>Welcome to your Workouts Page! </h4>
+            <h4>Take a look at your current workouts:</h4>
             {
                 workouts
-                    ? <p>{workouts.map(workout =>
+                    ? <div>{workouts.map(workout =>
                         <ul className="w3-card-4" key={workout._id}> {workout._id} </ul>)}
-                    </p>
+                    </div>
                     : <p>Waiting for server...</p>
             }
             <Link className="link" to={`/workouts`}>Create Your Workout!</Link>

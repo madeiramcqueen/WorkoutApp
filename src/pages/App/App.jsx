@@ -23,6 +23,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<WorkoutList />} />
             <Route path="/workouts" element={<WorkoutPage />} />
+            <Route path="/timer" element={<Timer />} />
           </Routes>
         </>
         :
