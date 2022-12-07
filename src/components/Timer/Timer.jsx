@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { useRef } from "react"
+import { useState, useRef } from "react"
 
 //Reference: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 //Reference: https://dev.to/am20dipi/how-to-start-stop-counter-in-react-3hf1
@@ -47,6 +46,9 @@ export default function Timer() {
         clearInterval(intervalId.current)
         document.querySelector('.stop-button').setAttribute('disabled', true)
         document.querySelector('.stop-button').removeAttribute('disabled')
+
+        //delete pause button
+        document.querySelector('.pause-button').remove()
     }
 
     return (
