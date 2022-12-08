@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { show } from "../../utilities/workouts-api";
 import './WorkoutDetailsPage.css'
 
-export default function WorkoutDetailPage() {
+export default function WorkoutDetailPage({ image }) {
     let { workoutId } = useParams()
     const [workout, setWorkout] = useState()
 
@@ -16,7 +16,7 @@ export default function WorkoutDetailPage() {
             console.log('got workout info!', response)
         }
         fetchWorkoutAndUpdateState()
-    }, [])
+    }, [workoutId])
 
 
     return (
@@ -26,10 +26,10 @@ export default function WorkoutDetailPage() {
                 workout ?
                     <div>{workout.exercises.map(exercise =>
                         <ul key={exercise._id}>
-                            {exercise.name}
-                            {exercise.image}
-                            {exercise.weight}
-                            {exercise.reps}
+                            <li>{exercise.name}</li>
+                            <img src={exercise.image} width="250" className="image" alt={image} />
+                            <li>Weight:{exercise.weight}</li>
+                            <li>Reps:{exercise.reps}</li>
                         </ul>)}
                     </div>
                     : <p>Waiting for server...</p>
