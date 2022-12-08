@@ -30,6 +30,7 @@ select {
     transition: .5s ease;
     backface-visibility: hidden;
     border-radius: 100px;
+    margin-bottom: 10px;
 }
 
 .middle {
@@ -52,15 +53,15 @@ select {
 }
 
 .text {
-    background-color: #354d938b;
+    background-color: #3041728b;
     color: white;
     font-size: 16px;
     padding: 16px 32px;
 }
 
-.button4 {
+.btn {
     background-color: #f1f1f197;
     color: black;
     border: 2px solid black;
-    margin-top: 5px;
+    margin: 10px;
 }

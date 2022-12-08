@@ -34,7 +34,7 @@ export default function WorkoutListPage() {
 
     return (
         <div className="workout-list">
-            <h4>Welcome to your Workouts Page! </h4>
+            <h4>Welcome to GettinFit!</h4>
             <img src="images/exercisepic.png" alt="exercise-pic" />
             <h4>Take a look at your current workouts:</h4>
             {
@@ -49,7 +49,7 @@ export default function WorkoutListPage() {
                     </div>
                     : <p>Waiting for server...</p>
             }
-            <Link className="link" to={`/workouts`}>Create Your Workout!</Link>
+            <Link className="link" to={`/workouts`}>Create A New Workout!</Link>
         </div>
     )
 }
