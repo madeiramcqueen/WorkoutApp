@@ -9,13 +9,11 @@ export default function WorkoutPage() {
   const [workout, setWorkout] = useState({ exercises: [] })
 
   const navigate = useNavigate()
-  const navigateHome = () => {
-    navigate('/')
-  }
 
   const onClick = function (event) {
     event.preventDefault()
-    create(workout).then(navigateHome) //TODO, not working and need to debug
+    create(workout)
+    navigate('/')
   }
 
   return (

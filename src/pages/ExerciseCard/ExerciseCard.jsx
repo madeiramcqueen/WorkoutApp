@@ -32,7 +32,7 @@ export default function ExerciseCard({ name, image, workout, setWorkout }) {
             <form onSubmit={onClick}>
                 <label>Weight Level:</label>
                 <select type="option" value={exercise.weight} onChange={onWeightChange}>
-                    <option value="None">None</option>
+                    <option value="0">None</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="5">5</option>

@@ -15,6 +15,7 @@ async function createWorkout(req, res) {
         await workout.save()
 
     } catch (err) {
+        console.log(req.body)
         res.status(400).json(err);
     }
 }

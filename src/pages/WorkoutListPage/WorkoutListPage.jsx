@@ -35,13 +35,13 @@ export default function WorkoutListPage() {
     return (
         <div className="workout-list">
             <h4>Welcome to your Workouts Page! </h4>
-            <img src="images/exercisepic.png" alt="exercise-pic"/>
+            <img src="images/exercisepic.png" alt="exercise-pic" />
             <h4>Take a look at your current workouts:</h4>
             {
                 workouts ?
                     <div>{workouts.map(workout =>
                         <ul key={workout._id}>
-                            <Link className="w3-card-4" to={`/workouts/${workout._id}`}>Workout : {workout._id}</Link>
+                            <Link className="w3-card-4" to={`/workouts/${workout._id}`}>Workout Created On: {(new Date(workout.createdAt)).toDateString()}</Link>
                             <button className="delete-button" onClick={deleteButton}
                                 value={workout._id}>X</button>
                         </ul>
