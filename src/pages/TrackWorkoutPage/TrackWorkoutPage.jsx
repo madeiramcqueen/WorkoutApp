@@ -29,23 +29,32 @@ export default function TrackWorkoutPage({ image }) {
             <h1>Track Your Workout</h1>
             {(() => {
                 if (workout) {
+                    //workout is loaded
                     if (index >= workout.exercises.length) {
+                        //all exercises in array have been completed
                         return (<p>Your workout is complete!</p>)
                     } else {
-                        return (<Timer
-                            nextCallback={nextCallBack} />)
+                        //timer is displayed with active workout showing
+                        const exercise = workout.exercises[index]
+                        return (
+                            <>
+                                <div
+                                    key={exercise._id}>
+                                    <p>Exercise Name: {exercise.name}</p>
+                                    <img src={exercise.image} width="250" className="image" alt={image} />
+                                    <p>Exercise Weight: {exercise.weight}</p>
+                                    <p>Exercise Reps: {exercise.reps}</p>
+                                </div>
+                                <Timer
+                                    nextCallback={nextCallBack} />
+                            </>)
                     }
                 } else {
                     return (<p>Waiting for server...</p>)
                 }
             })()}
             {/* {workout.exercises.map((exercise, key) => (
-                <div
-                    key={key} className="w3-panel w3-card-4">
-                    <p>Exercise Name: {exercise.name}</p>
-                    <p>Exercise Weight: {exercise.weight}</p>
-                    <p>Exercise Reps: {exercise.reps}</p>
-                </div>
+                
             ))} */}
         </div>
     )

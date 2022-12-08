@@ -46,7 +46,6 @@ export default function WorkoutListPage() {
                                 value={workout._id}>X</button>
                         </ul>
                     )}
-
                     </div>
                     : <p>Waiting for server...</p>
             }
