@@ -10,4 +10,19 @@ In this app, you can create your own workout -- to however many (or little) exer
 
 ![ExerciseAppWireframe](images/ExerciseAppWireframe.png "ExerciseAppWireframe")
 
+## Technologies Used
+1. MERN Stack
+    - Mongoose & MongoDB Online Web Server
+    - Express.js
+    - React
+    - Node.js
 
+2. Ajax/JWT
+3. JavaScript
+4. HTML
+5. CSS & W3Schools
+6. Lucidchart
+7. Trello: https://trello.com/b/QeTKrZEV/project-3-workout-app
+
+## Next Steps
+This is a project I plan on adding lots to and really amping up. To name a couple, some of my future goals for this app include creating a calendar to show which days you created your workouts on. Additionally, I'd like to graph that data to add as an extra visual to help the user see patterns of their workout routines, and hopefully influence future workouts. I also plan on spending more time on the styling of this app.
