@@ -61,7 +61,7 @@ export default function ExerciseCard({ name, image, workout, setWorkout }) {
                     <option value="45">45</option>
                     <option value="50">50</option>
                 </select>
-                <button type="submit">Add Exercise</button>
+                <button type="submit" className="btn btn-dark">Add Exercise</button>
             </form>
         </div>
     )

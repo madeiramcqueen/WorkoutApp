@@ -12,14 +12,14 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <div class="container-fluid">
-    <nav className="nav-link active" data-bs-toggle="tab" href="#home" aria-selected="true" role="tab">
-      <Link to="/" className="nav-link active" href="#">Home Page</Link>
-      &nbsp; | &nbsp;
-      <span>Welcome, {user.name}!</span>
-      &nbsp; | &nbsp;
-      <Link to="" className="nav-link active" href="#" onClick={handleLogOut}>Log Out</Link>
-    </nav>
+    <div className="container-fluid">
+      <nav className="nav-link active" data-bs-toggle="tab" href="#home" aria-selected="true" role="tab">
+        <Link to="/" className="nav-link active" href="#">Home Page</Link>
+        &nbsp; | &nbsp;
+        <span>Welcome, {user.name}!</span>
+        &nbsp; | &nbsp;
+        <Link to="" className="nav-link active" href="#" onClick={handleLogOut}>Log Out</Link>
+      </nav>
     </div>
   );
 }

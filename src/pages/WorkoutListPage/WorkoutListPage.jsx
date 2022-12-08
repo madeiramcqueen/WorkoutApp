@@ -42,7 +42,7 @@ export default function WorkoutListPage() {
                     <div>{workouts.map(workout =>
                         <ul key={workout._id}>
                             <Link to={`/workouts/${workout._id}`}>Workout Created On: {(new Date(workout.createdAt)).toDateString()}</Link>
-                            <button className="delete-button" onClick={deleteButton}
+                            <button className="btn btn-light" onClick={deleteButton}
                                 value={workout._id}>X</button>
                         </ul>
                     )}

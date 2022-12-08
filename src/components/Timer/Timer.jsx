@@ -57,8 +57,8 @@ export default function Timer({ nextCallback }) {
 
     return (
         <div className="timer">
-            <button className="start-button" onClick={startTimer}>Start</button>
-            <button className="stop-button" onClick={stopTimer}>Stop</button>
+            <button className="start-button btn btn-dark" onClick={startTimer}>Start</button>
+            <button className="stop-button btn btn-dark" onClick={stopTimer}>Stop</button>
             <p id="counter">{seconds}</p>
 
         </div>
