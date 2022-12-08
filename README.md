@@ -7,4 +7,7 @@ In this app, you can create your own workout -- to however many (or little) exer
 
 ## ERD & Wireframe
 ![ExerciseAppERD](images/ExerciseAppERD.png "ExerciseAppERD")
+
 ![ExerciseAppWireframe](images/ExerciseAppWireframe.png "ExerciseAppWireframe")
+
+
