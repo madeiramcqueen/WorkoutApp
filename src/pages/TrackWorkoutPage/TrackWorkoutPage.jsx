@@ -15,7 +15,7 @@ export default function TrackWorkoutPage({ image }) {
         setIndex(index + 1)
     }
 
-    //useEffect to load workout object from server
+    //get workout object from server
     useEffect(() => {
         async function fetchWorkoutAndUpdateState() {
             const response = await show(workoutId)
@@ -53,9 +53,6 @@ export default function TrackWorkoutPage({ image }) {
                     return (<p>Waiting for server...</p>)
                 }
             })()}
-            {/* {workout.exercises.map((exercise, key) => (
-                
-            ))} */}
         </div>
     )
 }

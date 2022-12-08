@@ -8,6 +8,7 @@ import './WorkoutListPage.css'
 export default function WorkoutListPage() {
     const [workouts, setWorkouts] = useState()
 
+    //update workout
     useEffect(() => {
         async function fetchWorkoutsAndUpdateState() {
             const response = await index()
@@ -16,6 +17,7 @@ export default function WorkoutListPage() {
         fetchWorkoutsAndUpdateState()
     }, [])
 
+    //delete a workout
     const removeWorkoutById = (id) => {
         setWorkouts(current =>
             current.filter(workout => {
@@ -23,9 +25,7 @@ export default function WorkoutListPage() {
             }))
     }
 
-
     const deleteButton = (event) => {
-        console.log('going to delete', event.target.value)
         //delete on server
         deleteWorkout(event.target.value)
         //delete on client
@@ -41,7 +41,7 @@ export default function WorkoutListPage() {
                 workouts ?
                     <div>{workouts.map(workout =>
                         <ul key={workout._id}>
-                            <Link className="w3-card-4" to={`/workouts/${workout._id}`}>Workout Created On: {(new Date(workout.createdAt)).toDateString()}</Link>
+                            <Link to={`/workouts/${workout._id}`}>Workout Created On: {(new Date(workout.createdAt)).toDateString()}</Link>
                             <button className="delete-button" onClick={deleteButton}
                                 value={workout._id}>X</button>
                         </ul>

@@ -8,12 +8,11 @@ export default function WorkoutDetailPage({ image }) {
     let { workoutId } = useParams()
     const [workout, setWorkout] = useState()
 
-    //useEffect to get workout object from server
+    //get workout object from server
     useEffect(() => {
         async function fetchWorkoutAndUpdateState() {
             const response = await show(workoutId)
             setWorkout(response)
-            console.log('got workout info!', response)
         }
         fetchWorkoutAndUpdateState()
     }, [workoutId])

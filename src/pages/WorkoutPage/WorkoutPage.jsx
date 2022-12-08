@@ -8,6 +8,7 @@ import { create } from "../../utilities/workouts-api";
 export default function WorkoutPage() {
   const [workout, setWorkout] = useState({ exercises: [] })
 
+  //navigate to WorkoutListPage (the Home page)
   const navigate = useNavigate()
 
   const onClick = function (event) {
@@ -19,10 +20,10 @@ export default function WorkoutPage() {
   return (
     <div className="workout-page">
       <h5>Add Exercises To Your Workout:</h5>
-      <button type="submit" className="button button4" onClick={onClick}>Save My Workout</button>
+      <button type="submit" onClick={onClick}>Save My Workout</button>
       {workout.exercises.map((exercise, key) => (
         <div
-          key={key} className="w3-panel w3-card-4">
+          key={key}>
           <p>Exercise Name: {exercise.name}</p>
           <p>Exercise Weight: {exercise.weight}</p>
           <p>Exercise Reps: {exercise.reps}</p>
