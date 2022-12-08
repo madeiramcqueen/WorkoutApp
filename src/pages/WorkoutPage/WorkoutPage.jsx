@@ -40,6 +40,5 @@ export default function WorkoutPage() {
           setWorkout={setWorkout} />
       ))}
     </div>
-
   );
 }

@@ -35,6 +35,7 @@ export default function WorkoutListPage() {
     return (
         <div className="workout-list">
             <h4>Welcome to your Workouts Page! </h4>
+            <img src="images/exercisepic.png" alt="exercise-pic"/>
             <h4>Take a look at your current workouts:</h4>
             {
                 workouts ?

@@ -21,21 +21,20 @@ export default function WorkoutDetailPage({ image }) {
 
     return (
         <div className="workout-details">
-            <h1> Workout Details Page</h1>
+            <h1>Your Workout Details</h1>
+            <Link to={`/track/${workoutId}`}>Start Workout!</Link>
             {
                 workout ?
                     <div>{workout.exercises.map(exercise =>
                         <ul key={exercise._id}>
                             <li>{exercise.name}</li>
                             <img src={exercise.image} width="250" className="image" alt={image} />
-                            <li>Weight:{exercise.weight}</li>
-                            <li>Reps:{exercise.reps}</li>
+                            <li>Weight: {exercise.weight}</li>
+                            <li>Reps: {exercise.reps}</li>
                         </ul>)}
                     </div>
                     : <p>Waiting for server...</p>
             }
-
-            <Link to={`/track/${workoutId}`}>Start Workout!</Link>
         </div>
 
     )

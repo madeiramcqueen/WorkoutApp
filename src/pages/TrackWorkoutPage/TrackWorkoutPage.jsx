@@ -6,30 +6,27 @@ import Timer from '../../components/Timer/Timer'
 
 //Reference: https://dev.to/samba_code/nested-ternary-statements-in-react-jsx-35kp
 
-export default function TrackWorkoutPage() {
+export default function TrackWorkoutPage({ image }) {
     let { workoutId } = useParams()
     const [workout, setWorkout] = useState()
     const [index, setIndex] = useState(0)
 
     const nextCallBack = () => {
         setIndex(index + 1)
-        console.log('got callback', index)
     }
-
 
     //useEffect to load workout object from server
     useEffect(() => {
         async function fetchWorkoutAndUpdateState() {
             const response = await show(workoutId)
             setWorkout(response)
-            console.log('got workout info!', response)
         }
         fetchWorkoutAndUpdateState()
-    }, [])
+    }, [workoutId])
 
     return (
         <div className="track-workout">
-            <h1> Track Your Workout</h1>
+            <h1>Track Your Workout</h1>
             {(() => {
                 if (workout) {
                     if (index >= workout.exercises.length) {
@@ -42,7 +39,14 @@ export default function TrackWorkoutPage() {
                     return (<p>Waiting for server...</p>)
                 }
             })()}
+            {/* {workout.exercises.map((exercise, key) => (
+                <div
+                    key={key} className="w3-panel w3-card-4">
+                    <p>Exercise Name: {exercise.name}</p>
+                    <p>Exercise Weight: {exercise.weight}</p>
+                    <p>Exercise Reps: {exercise.reps}</p>
+                </div>
+            ))} */}
         </div>
-
     )
 }
