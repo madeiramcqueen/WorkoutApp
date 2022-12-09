@@ -32,7 +32,8 @@ export default function TrackWorkoutPage({ image }) {
                     //workout is loaded
                     if (index >= workout.exercises.length) {
                         //all exercises in array have been completed
-                        return (<p>Your workout is complete!</p>)
+                        return (<p className="complete-workout">Your workout is complete! Nice work! </p>)
+
                         
                     } else {
                         //timer is displayed with active workout showing
