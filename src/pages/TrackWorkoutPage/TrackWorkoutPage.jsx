@@ -33,6 +33,7 @@ export default function TrackWorkoutPage({ image }) {
                     if (index >= workout.exercises.length) {
                         //all exercises in array have been completed
                         return (<p>Your workout is complete!</p>)
+                        
                     } else {
                         //timer is displayed with active workout showing
                         const exercise = workout.exercises[index]
