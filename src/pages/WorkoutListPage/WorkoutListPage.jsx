@@ -40,11 +40,11 @@ export default function WorkoutListPage() {
             {
                 workouts ?
                     <div>{workouts.map(workout =>
-                        <ul key={workout._id}>
-                            <Link to={`/workouts/${workout._id}`}>Workout Created On: {(new Date(workout.createdAt)).toDateString()}</Link>
+                        <div className="border-primary mb-3" key={workout._id}>
+                            <Link className="card-header" to={`/workouts/${workout._id}`}>Workout Created On: {(new Date(workout.createdAt)).toDateString()}</Link>
                             <button className="btn btn-light" onClick={deleteButton}
-                                value={workout._id}>X</button>
-                        </ul>
+                                value={workout._id}>Delete</button>
+                        </div>
                     )}
                     </div>
                     : <p>Waiting for server...</p>
