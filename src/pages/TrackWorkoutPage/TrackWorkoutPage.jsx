@@ -33,7 +33,7 @@ export default function TrackWorkoutPage({ image }) {
                     if (index >= workout.exercises.length) {
                         //all exercises in array have been completed
                         return (<p className="complete-workout">Your workout is complete! Nice work! </p>)
-   
+
                     } else {
                         //timer is displayed with active workout showing
                         const exercise = workout.exercises[index]
@@ -42,7 +42,8 @@ export default function TrackWorkoutPage({ image }) {
                                 <div
                                     key={exercise._id}>
                                     <p>Exercise Name: {exercise.name}</p>
-                                    <img src={exercise.image} width="250" className="image" alt={image} />
+                                    <img className="image" src={exercise.image} width="250" alt={image} />
+
                                     <p>Exercise Weight: {exercise.weight}</p>
                                     <p>Exercise Reps: {exercise.reps}</p>
                                 </div>
