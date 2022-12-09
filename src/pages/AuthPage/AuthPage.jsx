@@ -6,7 +6,7 @@ export default function AuthPage({ setUser }) {
   const [showSignUp, setShowSignUp] = useState(false);
   return (
     <main>
-      <h1>AuthPage</h1>
+      <h1>GettinFit AuthPage</h1>
       <button className="btn btn-dark" onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? 'Log In' : 'Not a user yet? Sign Up!'}</button>
       {showSignUp ?
         <SignUpForm setUser={setUser} />

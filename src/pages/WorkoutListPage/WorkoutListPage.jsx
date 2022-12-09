@@ -36,7 +36,7 @@ export default function WorkoutListPage() {
         <div className="workout-list">
             <h4>Welcome to GettinFit!</h4>
             <img src="images/exercisepic.png" alt="exercise-pic" />
-            <h4>Take a look at your current workouts:</h4>
+            <h4>Your current workouts:</h4>
             {
                 workouts ?
                     <div>{workouts.map(workout =>

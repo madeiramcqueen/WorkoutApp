@@ -30,13 +30,13 @@ export default function LoginForm({ setUser }) {
   return (
     <div>
       <div>
-        <form autoComplete="off" onSubmit={handleSubmit}>
-          <div class="form-group row">
+        <form className="form-group row" autoComplete="off" onSubmit={handleSubmit}>
+          <div>
             <label>Email</label>
             <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
             <label>Password</label>
             <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-            <button type="submit" class="btn btn-dark">LOG IN</button>
+            <button type="submit" className="btn btn-dark">LOG IN</button>
           </div>
         </form>
       </div>

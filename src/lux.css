@@ -4793,6 +4793,7 @@ fieldset:disabled .btn {
   background-color: var(--bs-card-cap-bg);
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
   font-size: larger;
+  font-weight: bolder;
 }
 
 .card-footer {

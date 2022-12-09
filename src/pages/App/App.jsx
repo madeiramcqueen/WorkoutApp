@@ -8,7 +8,6 @@ import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
 import WorkoutListPage from '../WorkoutListPage/WorkoutListPage';
 import { index } from '../../utilities/workouts-api'
-import Timer from '../../components/Timer/Timer';
 import TrackWorkoutPage from '../TrackWorkoutPage/TrackWorkoutPage';
 
 export default function App() {
@@ -16,7 +15,6 @@ export default function App() {
 
   index().then(workouts =>
     console.log(workouts))
-
   return (
     <main className="App">
       {user ?

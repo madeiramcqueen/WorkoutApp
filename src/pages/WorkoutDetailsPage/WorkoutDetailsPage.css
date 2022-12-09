@@ -9,3 +9,9 @@ li {
 .workout-details {
     text-align: center;
 }
+
+.image {
+    display: inline;
+    margin-right: 10px;
+    margin-left: 10px;
+}
