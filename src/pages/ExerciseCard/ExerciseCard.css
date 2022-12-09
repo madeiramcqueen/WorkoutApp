@@ -1,4 +1,6 @@
 .container {
+    display: grid;
+    place-items: center;
     position: relative;
 }
 
@@ -35,7 +37,6 @@ select {
     backface-visibility: hidden;
     border-radius: 100px;
     margin-bottom: 10px;
-
 }
 
 .middle {
