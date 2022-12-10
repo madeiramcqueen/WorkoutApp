@@ -25,12 +25,12 @@ export default function WorkoutDetailPage({ image }) {
             {
                 workout ?
                     <div>{workout.exercises.map(exercise =>
-                        <ul key={exercise._id}>
-                            <li>{exercise.name}</li>
+                        <div key={exercise._id}>
+                            <p>{exercise.name}</p>
                             <img src={exercise.image} width="250" className="image" alt={image} />
-                            <li>Weight: {exercise.weight}</li>
-                            <li>Reps: {exercise.reps}</li>
-                        </ul>)}
+                            <p>Weight: {exercise.weight}</p>
+                            <p>Reps: {exercise.reps}</p>
+                        </div>)}
                     </div>
                     : <p>Waiting for server...</p>
             }

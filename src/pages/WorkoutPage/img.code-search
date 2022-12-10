@@ -1,0 +1,30 @@
+# Query: img
+# Including: ./src/pages
+# ContextLines: 1
+
+5 results - 5 files
+
+src/pages/ExerciseCard/ExerciseCard.jsx:
+  26              <div className="container">
+  27:                 <img src={image} className="image" alt={image} />
+  28                  <div className="middle">
+
+src/pages/TrackWorkoutPage/TrackWorkoutPage.jsx:
+  44                                      <p>Exercise Name: {exercise.name}</p>
+  45:                                     <img className="image" src={exercise.image} width="250" alt={image} />
+  46  
+
+src/pages/WorkoutDetailsPage/WorkoutDetailsPage.jsx:
+  29                              <li>{exercise.name}</li>
+  30:                             <img src={exercise.image} className="image" alt={image} />
+  31                              <li>Weight: {exercise.weight}</li>
+
+src/pages/WorkoutListPage/WorkoutListPage.css:
+  4  
+  5: img {
+  6      margin: 5px;
+
+src/pages/WorkoutListPage/WorkoutListPage.jsx:
+  37              <h4>Welcome to GettinFit!</h4>
+  38:             <img src="images/exercisepic.png" alt="exercise-pic" />
+  39              <h4>Your current workouts:</h4>

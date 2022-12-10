@@ -24,7 +24,7 @@ export default function ExerciseCard({ name, image, workout, setWorkout }) {
         <div className="exercise-card">
             {name}
             <div className="container">
-                <img src={image} width="250" className="image" alt={image} />
+                <img src={image} className="image" alt={image} />
                 <div className="middle">
                     <div className="text">{name}</div>
                 </div>
