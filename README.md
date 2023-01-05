@@ -31,5 +31,10 @@ With GettinFit, you can create your own workout -- to however many (or little) e
 8. Lucidchart
 9. Trello: https://trello.com/b/QeTKrZEV/project-3-workout-app
 
+## GettinFit App:
+https://gettinfit.herokuapp.com/
+
 ## Next Steps
-This is a project I plan on adding lots to and really amping up. To name a couple, some of my future goals for this app include creating a calendar to show which days you created your workouts on. Additionally, I'd like to graph that data to add as an extra visual to help the user see patterns of their workout routines, and hopefully influence future workouts. I also plan on spending more time on the styling of this app.
+1. Create a calendar to show which days you created your workouts on.
+2. Build a graph to display the user's workout data to add as an extra visual. This will help the user see patterns in their workout routines, and hopefully influence future workouts.
+3. Add more styling.
