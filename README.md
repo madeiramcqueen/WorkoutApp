@@ -1,14 +1,14 @@
 # Project 3: MERN-Stack Workout App, GettinFit :muscle:
 
 # About GettinFit:
-Exercising is crucial in keeping the mind and body healthy. However, for many, motivating oneself to actually getting up and moving the body can be difficult (even for myself at times). Sometimes we we just don't know where to begin. What types of exercises should I do? Should I include weights? If so, how heavy? Should I count a certain amount of reps? This app is here to take a bit of that stress away.
+Exercising is crucial in keeping the mind and body healthy. However, for many, motivating oneself to actually getting up and moving the body can be difficult (even for myself at times). This app is here to take a bit of that stress away.
 
 With GettinFit, you can create your own workout -- to however many (or little) exercises you want. Scroll through different exercise options, add them to your workout for the day, then track your workout with a timer. You can delete a workout if you ended up not liking it, too.
 
-## ERD
+## ERD & Wireframe
 ![ExerciseAppERD](images/ExerciseAppERD.png "ExerciseAppERD")
-## Wireframe
 ![ExerciseAppWireframe](images/ExerciseAppWireframe.png "ExerciseAppWireframe")
+
 ## Screenshots
 ![HomePage](images/HomePage.png "HomePage")
 ![Exercises](images/Exercises.png "Exercises")
