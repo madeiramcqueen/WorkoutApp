@@ -2,6 +2,8 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const User = require('../../models/user');
 
+// User login, create and check JWT
+
 module.exports = {
   create,
   login,

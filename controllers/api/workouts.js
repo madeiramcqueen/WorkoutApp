@@ -1,6 +1,8 @@
 
 const Workout = require('../../models/workout')
 
+// Create, update, show, and delete a workout functions
+
 module.exports = {
     create: createWorkout,
     update: updateWorkout,
